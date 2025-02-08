@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 df = pd.read_csv("insta_train.csv")
 
 # Drop unnecessary columns
-df = df.drop(["profile pic", "name==username", "external URL"], axis=1)
+df = df.drop(["profile pic", "name==username", "description length", "external URL"], axis=1)
 
 # Features & target selection
 X = df.drop("fake", axis=1)
